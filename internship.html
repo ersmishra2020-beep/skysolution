@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Program – SkyDevOps Solution</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .track-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; background: var(--card-bg); }
+  .track-card.active { border-color: var(--sky); background: rgba(0,180,240,0.04); }
+  .track-title { font-family: 'Orbitron', monospace; font-size: 1.1rem; color: var(--sky); margin-bottom: 0.5rem; }
+  .success-msg { display:none; background: rgba(0,180,240,0.1); border: 1px solid var(--sky); color: var(--sky); padding: 1rem 1.5rem; border-radius: var(--radius); margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Sky<span>DevOps</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="internship.html" style="color:var(--sky)">Internship</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">Career Launchpad</div>
+  <h1>Internship <span style="color:var(--sky)">Training Program</span></h1>
+  <p>Get real-world DevOps experience, mentorship, and an official completion certificate from SkyDevOps Solution.</p>
+</div>
+
+<section>
+  <!-- OVERVIEW -->
+  <div class="section-label">Program Overview</div>
+  <h2 class="section-title">Why Join <span style="color:var(--sky)">SkyDevOps?</span></h2>
+  <div class="grid-3" style="margin-bottom:3rem;">
+    <div class="card"><div class="card-icon">🎓</div><h3>Structured Learning</h3><p>A carefully designed curriculum covering DevOps tools, cloud platforms, and automation from basics to advanced.</p></div>
+    <div class="card"><div class="card-icon">💻</div><h3>Live Projects</h3><p>Work on real client projects under the guidance of experienced DevOps professionals from day one.</p></div>
+    <div class="card"><div class="card-icon">📜</div><h3>Official Certificate</h3><p>Receive an officially signed completion certificate from Sushila Mishra, CEO of SkyDevOps Solution.</p></div>
+    <div class="card"><div class="card-icon">🤝</div><h3>Mentorship</h3><p>One-on-one mentorship sessions with experienced DevOps engineers throughout the program.</p></div>
+    <div class="card"><div class="card-icon">📄</div><h3>Offer Letter</h3><p>Receive a formal internship offer letter upon selection, valid for visa, college, and academic submissions.</p></div>
+    <div class="card"><div class="card-icon">🚀</div><h3>Career Support</h3><p>Resume building, LinkedIn profile optimization, and mock interviews to help you land your dream job.</p></div>
+  </div>
+
+  <!-- TRACKS -->
+  <div class="section-label">Internship Tracks</div>
+  <h2 class="section-title">Choose Your <span style="color:var(--sky)">Track</span></h2>
+  <div class="grid-2" style="margin-bottom:3rem;">
+    <div class="track-card active">
+      <div class="track-title">🛠️ Track A — Technical DevOps</div>
+      <p style="color:var(--muted); margin-bottom:1rem;">Hands-on technical training in DevOps tools and cloud technologies.</p>
+      <ul class="doc-list">
+        <li>Linux & Shell Scripting</li>
+        <li>Docker & Kubernetes</li>
+        <li>CI/CD with Jenkins / GitHub Actions</li>
+        <li>Infrastructure as Code (Terraform)</li>
+        <li>AWS / Azure Cloud Basics</li>
+        <li>Monitoring with Grafana & Prometheus</li>
+      </ul>
+      <br><span class="tag">Duration: 4–12 Weeks</span><span class="tag">Mode: Remote / Hybrid</span>
+    </div>
+    <div class="track-card">
+      <div class="track-title">💼 Track B — Business & Operations</div>
+      <p style="color:var(--muted); margin-bottom:1rem;">Ideal for management, marketing, or non-technical students.</p>
+      <ul class="doc-list">
+        <li>IT Project Management Basics</li>
+        <li>Tech Documentation & Reporting</li>
+        <li>Client Communication & Support</li>
+        <li>Digital Marketing for IT Companies</li>
+        <li>Business Analysis Fundamentals</li>
+        <li>HR & Admin Operations in IT Firms</li>
+      </ul>
+      <br><span class="tag">Duration: 4–8 Weeks</span><span class="tag">Mode: Remote</span>
+    </div>
+  </div>
+
+  <!-- APPLICATION FORM -->
+  <div class="section-label">Apply Now</div>
+  <h2 class="section-title">Internship <span style="color:var(--sky)">Application</span></h2>
+  <div class="doc-section" style="max-width:760px;">
+    <div class="alert alert-info">Applications are open for the current batch. Fill out the form below and our team will contact you within 2–3 business days.</div>
+    <form id="internForm">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+        <div class="form-group"><label>Full Name *</label><input type="text" required placeholder="Your full name"></div>
+        <div class="form-group"><label>Email Address *</label><input type="email" required placeholder="you@email.com"></div>
+        <div class="form-group"><label>Phone Number *</label><input type="tel" required placeholder="+91 XXXXX XXXXX"></div>
+        <div class="form-group"><label>College / University *</label><input type="text" required placeholder="Your institution"></div>
+        <div class="form-group"><label>Course / Degree *</label><input type="text" required placeholder="e.g. B.Tech CSE, BCA"></div>
+        <div class="form-group"><label>Year of Study</label>
+          <select>
+            <option>1st Year</option><option>2nd Year</option><option>3rd Year</option>
+            <option>4th Year</option><option>Final Year</option><option>Graduated</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Internship Track *</label>
+          <select required>
+            <option>Track A – Technical DevOps</option>
+            <option>Track B – Business & Operations</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Preferred Duration</label>
+          <select>
+            <option>4 Weeks</option><option>6 Weeks</option><option>8 Weeks</option><option>12 Weeks</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group"><label>Why do you want to join SkyDevOps? *</label>
+        <textarea required placeholder="Tell us about your motivation, goals, and what you hope to learn..."></textarea>
+      </div>
+      <div class="form-group"><label>Any relevant skills or experience?</label>
+        <textarea placeholder="List any programming languages, tools, or previous experience..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Application 🚀</button>
+    </form>
+    <div class="success-msg" id="internMsg">✅ Application submitted successfully! We will contact you within 2–3 business days.</div>
+  </div>
+
+  <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+    <a href="internship-rules.html" class="btn btn-outline">📋 View Internship Rules</a>
+    <a href="offer-letter.html" class="btn btn-outline">📄 Sample Offer Letter</a>
+    <a href="certificate.html" class="btn btn-outline">🏆 View Certificate</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>SkyDevOps Solution</h4><p>Owned by <strong style="color:var(--white)">Ms. Sushila Mishra</strong></p><p>📧 info@skydevopssolution.com</p><p>📞 +91 98765 43210</p></div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">DevOps</a><a href="services.html">CI/CD</a><a href="services.html">Cloud</a></div>
+    <div class="footer-col"><h4>Internship</h4><a href="internship.html">Apply</a><a href="internship-rules.html">Rules</a><a href="offer-letter.html">Offer Letter</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 SkyDevOps Solution | Sole Owner: Sushila Mishra</p></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

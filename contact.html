@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – SkyDevOps Solution</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Sky<span>DevOps</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="internship.html">Internship</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" style="color:var(--sky)" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">Get In Touch</div>
+  <h1>Contact <span style="color:var(--sky)">SkyDevOps Solution</span></h1>
+  <p>Have a project in mind, want to learn more about our services, or interested in the internship? We'd love to hear from you.</p>
+</div>
+
+<section>
+  <div style="display:grid; grid-template-columns:1fr 1.5fr; gap:3rem; align-items:start; flex-wrap:wrap;">
+
+    <!-- CONTACT INFO -->
+    <div>
+      <div class="section-label">Reach Us</div>
+      <h2 class="section-title" style="font-size:1.8rem;">Contact <span style="color:var(--sky)">Info</span></h2>
+
+      <div class="card" style="margin-bottom:1rem;">
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div class="card-icon" style="flex-shrink:0;">📧</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;">Email</h3>
+            <p>info@skydevopssolution.com</p>
+            <p style="font-size:0.85rem;">We respond within 24 hours</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:1rem;">
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div class="card-icon" style="flex-shrink:0;">📞</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;">Phone / WhatsApp</h3>
+            <p>+91 98765 43210</p>
+            <p style="font-size:0.85rem;">Mon–Sat, 10 AM – 6 PM IST</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:1rem;">
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div class="card-icon" style="flex-shrink:0;">🏢</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;">Location</h3>
+            <p>Karnataka, India</p>
+            <p style="font-size:0.85rem;">Remote-first company — serving clients across India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div class="card-icon" style="flex-shrink:0;">👩‍💼</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;">Owner & CEO</h3>
+            <p>Ms. Sushila Mishra</p>
+            <p style="font-size:0.85rem;">Sole Owner, SkyDevOps Solution</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <div class="section-label">Quick Links</div>
+        <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:0.8rem;">
+          <a href="internship.html" class="btn btn-outline" style="text-align:center; padding:10px;">Apply for Internship</a>
+          <a href="services.html" class="btn btn-outline" style="text-align:center; padding:10px;">View All Services</a>
+          <a href="offer-letter.html" class="btn btn-outline" style="text-align:center; padding:10px;">Sample Offer Letter</a>
+          <a href="certificate.html" class="btn btn-outline" style="text-align:center; padding:10px;">View Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div>
+      <div class="section-label">Send a Message</div>
+      <h2 class="section-title" style="font-size:1.8rem;">Write to <span style="color:var(--sky)">Us</span></h2>
+      <div class="doc-section">
+        <form id="contactForm">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="form-group"><label>Full Name *</label><input type="text" required placeholder="Your name"></div>
+            <div class="form-group"><label>Email Address *</label><input type="email" required placeholder="you@email.com"></div>
+            <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+            <div class="form-group"><label>Subject *</label>
+              <select required>
+                <option value="">Select subject...</option>
+                <option>DevOps Services Enquiry</option>
+                <option>Cloud Migration</option>
+                <option>CI/CD Pipeline Setup</option>
+                <option>IT Automation</option>
+                <option>Internship Enquiry</option>
+                <option>Partnership / Collaboration</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Company / Organisation</label><input type="text" placeholder="Your company or institution name"></div>
+          <div class="form-group"><label>Message *</label>
+            <textarea required placeholder="Tell us about your project, requirements, or questions..." style="min-height:150px;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message 🚀</button>
+        </form>
+        <div class="success-msg" id="formMsg" style="display:none; background:rgba(0,180,240,0.1); border:1px solid var(--sky); color:var(--sky); padding:1rem 1.5rem; border-radius:10px; margin-top:1rem;">
+          ✅ Thank you! Your message has been received. We'll get back to you within 24 hours.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>SkyDevOps Solution</h4><p>Owned by <strong style="color:var(--white)">Ms. Sushila Mishra</strong></p><p>📧 info@skydevopssolution.com</p><p>📞 +91 98765 43210</p></div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">DevOps</a><a href="services.html">CI/CD</a><a href="services.html">Cloud</a></div>
+    <div class="footer-col"><h4>Internship</h4><a href="internship.html">Apply</a><a href="internship-rules.html">Rules</a><a href="offer-letter.html">Offer Letter</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 SkyDevOps Solution | Sole Owner: Sushila Mishra</p></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/project
+│
+├── index.html
+├── services.html
+├── about.html
+│
+├── /css
+│   └── style.css
+│
+├── /js
+│   ├── main.js          (entry point)
+│   ├── components/
+│   │   ├── navbar.js
+│   │   ├── footer.js
+│   │
+│   ├── utils/
+│   │   ├── nav.js
+│   │   ├── scroll.js
+│   │   ├── forms.js

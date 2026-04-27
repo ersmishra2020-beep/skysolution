@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Certificate – SkyDevOps Solution</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .cert-wrapper { max-width: 860px; margin: 0 auto; }
+  .cert-box {
+    background: linear-gradient(135deg, #020b18 0%, #071428 50%, #020b18 100%);
+    border: 3px solid var(--sky);
+    border-radius: 16px;
+    padding: 60px 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(0,180,240,0.15), inset 0 0 60px rgba(0,180,240,0.03);
+  }
+  .cert-box::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(0,180,240,0.2);
+    border-radius: 10px;
+    pointer-events: none;
+  }
+  .cert-corner {
+    position: absolute;
+    width: 60px; height: 60px;
+    border-color: var(--sky);
+    border-style: solid;
+    opacity: 0.4;
+  }
+  .cert-corner.tl { top: 20px; left: 20px; border-width: 3px 0 0 3px; }
+  .cert-corner.tr { top: 20px; right: 20px; border-width: 3px 3px 0 0; }
+  .cert-corner.bl { bottom: 20px; left: 20px; border-width: 0 0 3px 3px; }
+  .cert-corner.br { bottom: 20px; right: 20px; border-width: 0 3px 3px 0; }
+
+  .cert-logo { font-family: 'Orbitron', monospace; font-size: 1.6rem; font-weight: 900; color: var(--sky); margin-bottom: 0.3rem; }
+  .cert-logo span { color: var(--accent); }
+  .cert-tagline { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 2rem; }
+  .cert-title { font-family: 'Orbitron', monospace; font-size: 1rem; letter-spacing: 0.25em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .cert-heading { font-family: 'Orbitron', monospace; font-size: 2.2rem; font-weight: 900; color: var(--white); margin-bottom: 1.5rem; }
+  .cert-presented { font-size: 1rem; color: var(--muted); margin-bottom: 0.5rem; }
+  .cert-name { font-family: 'Orbitron', monospace; font-size: 2rem; font-weight: 700; color: var(--sky); border-bottom: 2px solid rgba(0,180,240,0.3); display: inline-block; padding-bottom: 8px; margin-bottom: 1.5rem; min-width: 340px; }
+  .cert-body { font-size: 1rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; max-width: 580px; margin-left: auto; margin-right: auto; }
+  .cert-domain { display: inline-block; background: rgba(0,180,240,0.1); border: 1px solid var(--sky); color: var(--sky); padding: 6px 20px; border-radius: 100px; font-size: 0.9rem; font-weight: 600; margin-bottom: 2rem; }
+  .cert-dates { display: flex; justify-content: center; gap: 3rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+  .cert-date-item { text-align: center; }
+  .cert-date-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+  .cert-date-val { font-family: 'Orbitron', monospace; font-size: 1rem; color: var(--white); }
+  .cert-divider { border: none; border-top: 1px solid rgba(0,180,240,0.15); margin: 2rem 0; }
+  .cert-sign { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
+  .cert-sign-block { text-align: center; min-width: 180px; }
+  .cert-sign-line { border-top: 1.5px solid rgba(0,180,240,0.3); padding-top: 8px; margin-top: 50px; }
+  .cert-sign-name { font-family: 'Orbitron', monospace; font-size: 0.85rem; color: var(--white); }
+  .cert-sign-title { font-size: 0.78rem; color: var(--muted); }
+  .cert-id { font-size: 0.75rem; color: var(--muted); margin-top: 1.5rem; letter-spacing: 0.1em; }
+  .cert-seal {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.55rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  .cert-preview-note {
+    background: rgba(240,165,0,0.08);
+    border: 1px solid rgba(240,165,0,0.25);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent);
+    font-size: 0.95rem;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media(max-width:600px) { .form-row { grid-template-columns: 1fr; } .cert-box { padding: 40px 24px; } .cert-heading { font-size: 1.5rem; } .cert-name { font-size: 1.4rem; min-width: unset; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Sky<span>DevOps</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="internship.html" style="color:var(--sky)">Internship</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">Official Document</div>
+  <h1>Internship Completion <span style="color:var(--sky)">Certificate</span></h1>
+  <p>Official certificate issued by SkyDevOps Solution upon successful internship completion.</p>
+</div>
+
+<section>
+  <div class="cert-wrapper">
+
+    <div class="cert-preview-note">
+      ⚠️ This is a sample/preview certificate. The actual certificate will be issued by <strong>Ms. Sushila Mishra</strong> (Sole Owner) upon successful completion of your internship program.
+    </div>
+
+    <!-- CERTIFICATE -->
+    <div class="cert-box" id="certificate">
+      <div class="cert-corner tl"></div>
+      <div class="cert-corner tr"></div>
+      <div class="cert-corner bl"></div>
+      <div class="cert-corner br"></div>
+
+      <div class="cert-logo">Sky<span>DevOps</span> Solution</div>
+      <div class="cert-tagline">IT Services · DevOps · Cloud · Automation</div>
+
+      <div class="cert-title">Certificate of Completion</div>
+      <div class="cert-heading">Internship Certificate</div>
+
+      <div class="cert-presented">This is to proudly certify that</div>
+      <div class="cert-name" id="certName">[ Intern Full Name ]</div>
+
+      <div class="cert-body">
+        has successfully completed the <strong style="color:var(--white)">Internship Training Program</strong> at
+        <strong style="color:var(--sky)">SkyDevOps Solution</strong>, demonstrating exceptional dedication,
+        technical skill, and professional conduct throughout the internship period.
+      </div>
+
+      <div class="cert-domain" id="certDomain">Domain: DevOps Engineering</div>
+
+      <div class="cert-dates">
+        <div class="cert-date-item">
+          <div class="cert-date-label">Start Date</div>
+          <div class="cert-date-val" id="certStart">— — —</div>
+        </div>
+        <div class="cert-date-item">
+          <div class="cert-date-label">End Date</div>
+          <div class="cert-date-val" id="certEnd">— — —</div>
+        </div>
+        <div class="cert-date-item">
+          <div class="cert-date-label">Duration</div>
+          <div class="cert-date-val" id="certDuration">— — —</div>
+        </div>
+      </div>
+
+      <hr class="cert-divider">
+
+      <div class="cert-sign">
+        <div class="cert-sign-block">
+          <div class="cert-seal">Sky<br>DevOps<br>Official<br>Seal</div>
+        </div>
+        <div class="cert-sign-block">
+          <div class="cert-sign-line">
+            <div class="cert-sign-name">Sushila Mishra</div>
+            <div class="cert-sign-title">Sole Owner & CEO<br>SkyDevOps Solution</div>
+          </div>
+        </div>
+        <div class="cert-sign-block">
+          <div class="cert-sign-line">
+            <div class="cert-sign-name">Program Director</div>
+            <div class="cert-sign-title">Internship & Training<br>SkyDevOps Solution</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-id" id="certId">Certificate ID: SDOS-2025-XXXX &nbsp;|&nbsp; Issued by SkyDevOps Solution &nbsp;|&nbsp; Karnataka, India</div>
+    </div>
+
+    <!-- PREVIEW GENERATOR -->
+    <div style="margin-top: 3rem;">
+      <div class="section-label">Preview Generator</div>
+      <h2 class="section-title" style="font-size:1.4rem;">Fill Details to Preview</h2>
+      <div class="doc-section">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Intern Full Name</label>
+            <input type="text" id="inputName" placeholder="e.g. Rahul Sharma" oninput="updateCert()">
+          </div>
+          <div class="form-group">
+            <label>Internship Domain</label>
+            <select id="inputDomain" onchange="updateCert()">
+              <option>DevOps Engineering</option>
+              <option>Cloud Computing (AWS/Azure/GCP)</option>
+              <option>CI/CD & Automation</option>
+              <option>Python Development</option>
+              <option>Linux & Bash Scripting</option>
+              <option>Docker & Kubernetes</option>
+              <option>Full Stack Development</option>
+              <option>Data Engineering</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Start Date</label>
+            <input type="date" id="inputStart" oninput="updateCert()">
+          </div>
+          <div class="form-group">
+            <label>End Date</label>
+            <input type="date" id="inputEnd" oninput="updateCert()">
+          </div>
+          <div class="form-group">
+            <label>Certificate ID</label>
+            <input type="text" id="inputId" placeholder="e.g. SDOS-2025-0042" oninput="updateCert()">
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ Print Certificate</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>SkyDevOps Solution</h4><p>Owned by <strong style="color:var(--white)">Ms. Sushila Mishra</strong></p><p>📧 info@skydevopssolution.com</p><p>📞 +91 98765 43210</p></div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">DevOps</a><a href="services.html">CI/CD</a><a href="services.html">Cloud</a></div>
+    <div class="footer-col"><h4>Internship</h4><a href="internship.html">Apply</a><a href="internship-rules.html">Rules</a><a href="offer-letter.html">Offer Letter</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 SkyDevOps Solution | Sole Owner: Sushila Mishra</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function updateCert() {
+  const name = document.getElementById('inputName').value || '[ Intern Full Name ]';
+  const domain = document.getElementById('inputDomain').value;
+  const start = document.getElementById('inputStart').value;
+  const end = document.getElementById('inputEnd').value;
+  const id = document.getElementById('inputId').value || 'SDOS-2025-XXXX';
+
+  document.getElementById('certName').textContent = name;
+  document.getElementById('certDomain').textContent = 'Domain: ' + domain;
+  document.getElementById('certId').textContent = 'Certificate ID: ' + id + ' | Issued by SkyDevOps Solution | Karnataka, India';
+
+  if (start) document.getElementById('certStart').textContent = new Date(start).toLocaleDateString('en-IN', {day:'2-digit',month:'short',year:'numeric'});
+  if (end) document.getElementById('certEnd').textContent = new Date(end).toLocaleDateString('en-IN', {day:'2-digit',month:'short',year:'numeric'});
+
+  if (start && end) {
+    const diff = Math.round((new Date(end) - new Date(start)) / (1000*60*60*24*7));
+    document.getElementById('certDuration').textContent = diff + ' Weeks';
+  }
+}
+</script>
+</body>
+</html>
