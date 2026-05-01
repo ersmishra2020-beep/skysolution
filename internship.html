@@ -10,6 +10,52 @@
   .track-card.active { border-color: var(--sky); background: rgba(0,180,240,0.04); }
   .track-title { font-family: 'Orbitron', monospace; font-size: 1.1rem; color: var(--sky); margin-bottom: 0.5rem; }
   .success-msg { display:none; background: rgba(0,180,240,0.1); border: 1px solid var(--sky); color: var(--sky); padding: 1rem 1.5rem; border-radius: var(--radius); margin-top: 1rem; }
+
+  /* Registration strip */
+  .reg-strip {
+    background: rgba(0,180,240,0.05);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+  .reg-strip .reg-item { display: flex; align-items: center; gap: 0.4rem; }
+  .reg-strip .reg-label { color: var(--muted); text-transform: uppercase; }
+  .reg-strip .reg-value { color: var(--sky); font-weight: 600; font-family: monospace; }
+  .reg-strip .sep { color: var(--border); }
+
+  /* Verified badges */
+  .verified-row {
+    display: flex; gap: 0.75rem; flex-wrap: wrap;
+    margin: 1rem 0 0; justify-content: center;
+  }
+  .vbadge {
+    font-size: 0.72rem; letter-spacing: 0.05em;
+    padding: 4px 12px; border-radius: 20px; border: 1px solid;
+  }
+  .vbadge.msme  { color: #00e5a0; border-color: rgba(0,229,160,0.35); background: rgba(0,229,160,0.07); }
+  .vbadge.gst   { color: #ffd166; border-color: rgba(255,209,102,0.35); background: rgba(255,209,102,0.07); }
+  .vbadge.govt  { color: var(--sky); border-color: rgba(0,180,240,0.4); background: rgba(0,180,240,0.07); }
+
+  /* Official info box */
+  .official-box {
+    background: rgba(0,180,240,0.04);
+    border: 1px solid rgba(0,180,240,0.25);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.82rem;
+    line-height: 1.9;
+    color: var(--muted);
+  }
+  .official-box strong { color: var(--white); }
+  .official-box .reg-num { color: var(--sky); font-family: monospace; font-weight: 600; }
+  .official-box a { color: var(--sky); text-decoration: none; }
 </style>
 </head>
 <body>
@@ -27,10 +73,38 @@
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
+<!-- REGISTRATION STRIP -->
+<div class="reg-strip">
+  <div class="reg-item">
+    <span class="reg-label">MSME / UDYAM</span>
+    <span class="reg-value">UDYAM-UP-28-0216875</span>
+  </div>
+  <span class="sep">|</span>
+  <div class="reg-item">
+    <span class="reg-label">GSTIN</span>
+    <span class="reg-value">09AJOPC8312N1ZS</span>
+  </div>
+  <span class="sep">|</span>
+  <div class="reg-item">
+    <span class="reg-label">Enterprise</span>
+    <span class="reg-value">Micro · 2026-27</span>
+  </div>
+  <span class="sep">|</span>
+  <div class="reg-item">
+    <span class="reg-label">NIC</span>
+    <span class="reg-value">62013 · IT Services</span>
+  </div>
+</div>
+
 <div class="page-hero">
   <div class="section-label">Career Launchpad</div>
   <h1>Internship <span style="color:var(--sky)">Training Program</span></h1>
   <p>Get real-world DevOps experience, mentorship, and an official completion certificate from SkyDevOps Solution.</p>
+  <div class="verified-row">
+    <span class="vbadge msme">✓ MSME Registered · UDYAM-UP-28-0216875</span>
+    <span class="vbadge gst">✓ GST · 09AJOPC8312N1ZS</span>
+    <span class="vbadge govt">✓ Govt Recognised · Micro Enterprise</span>
+  </div>
 </div>
 
 <section>
@@ -40,10 +114,10 @@
   <div class="grid-3" style="margin-bottom:3rem;">
     <div class="card"><div class="card-icon">🎓</div><h3>Structured Learning</h3><p>A carefully designed curriculum covering DevOps tools, cloud platforms, and automation from basics to advanced.</p></div>
     <div class="card"><div class="card-icon">💻</div><h3>Live Projects</h3><p>Work on real client projects under the guidance of experienced DevOps professionals from day one.</p></div>
-    <div class="card"><div class="card-icon">📜</div><h3>Official Certificate</h3><p>Receive an officially signed completion certificate from Sushila Mishra, CEO of SkyDevOps Solution.</p></div>
+    <div class="card"><div class="card-icon">📜</div><h3>Official Certificate</h3><p>Receive an officially signed completion certificate from <strong>Sushila Mishra</strong>, Proprietor of SkyDevOps Solution — valid under MSME registration <strong>UDYAM-UP-28-0216875</strong>.</p></div>
     <div class="card"><div class="card-icon">🤝</div><h3>Mentorship</h3><p>One-on-one mentorship sessions with experienced DevOps engineers throughout the program.</p></div>
     <div class="card"><div class="card-icon">📄</div><h3>Offer Letter</h3><p>Receive a formal internship offer letter upon selection, valid for visa, college, and academic submissions.</p></div>
-    <div class="card"><div class="card-icon">🚀</div><h3>Career Support</h3><p>Resume building, LinkedIn profile optimization, and mock interviews to help you land your dream job.</p></div>
+    <div class="card"><div class="card-icon">🚀</div><h3>Career Support</h3><p>Resume building, LinkedIn profile optimisation, and mock interviews to help you land your dream job.</p></div>
   </div>
 
   <!-- TRACKS -->
@@ -82,41 +156,69 @@
   <div class="section-label">Apply Now</div>
   <h2 class="section-title">Internship <span style="color:var(--sky)">Application</span></h2>
   <div class="doc-section" style="max-width:760px;">
+
     <div class="alert alert-info">Applications are open for the current batch. Fill out the form below and our team will contact you within 2–3 business days.</div>
+
+    <!-- Official details box -->
+    <div class="official-box">
+      <strong>SkyDevOps Solution</strong> — Government Registered MSME IT Enterprise &nbsp;|&nbsp;
+      Proprietor: <strong>Sushila Mishra</strong><br/>
+      MSME/UDYAM: <span class="reg-num">UDYAM-UP-28-0216875</span> &nbsp;|&nbsp;
+      GSTIN: <span class="reg-num">09AJOPC8312N1ZS</span> &nbsp;|&nbsp;
+      NIC: 62013<br/>
+      📧 <a href="mailto:er.smishra2020@gmail.com">er.smishra2020@gmail.com</a> &nbsp;|&nbsp;
+      📞 <a href="tel:9650716663">+91 9650716663</a> &nbsp;|&nbsp;
+      Greater Noida, UP – 201308
+    </div>
+
     <form id="internForm">
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-        <div class="form-group"><label>Full Name *</label><input type="text" required placeholder="Your full name"></div>
-        <div class="form-group"><label>Email Address *</label><input type="email" required placeholder="you@email.com"></div>
-        <div class="form-group"><label>Phone Number *</label><input type="tel" required placeholder="+91 XXXXX XXXXX"></div>
-        <div class="form-group"><label>College / University *</label><input type="text" required placeholder="Your institution"></div>
-        <div class="form-group"><label>Course / Degree *</label><input type="text" required placeholder="e.g. B.Tech CSE, BCA"></div>
+        <div class="form-group"><label>Full Name *</label><input type="text" id="iName" required placeholder="As per Aadhar / ID card"></div>
+        <div class="form-group"><label>Email Address *</label><input type="email" id="iEmail" required placeholder="you@email.com"></div>
+        <div class="form-group"><label>Phone Number *</label><input type="tel" id="iPhone" required placeholder="+91 XXXXX XXXXX"></div>
+        <div class="form-group"><label>College / University *</label><input type="text" id="iCollege" required placeholder="Your institution name"></div>
+        <div class="form-group"><label>Course / Degree *</label><input type="text" id="iDegree" required placeholder="e.g. B.Tech CSE, BCA, MBA"></div>
         <div class="form-group"><label>Year of Study</label>
-          <select>
+          <select id="iYear">
             <option>1st Year</option><option>2nd Year</option><option>3rd Year</option>
             <option>4th Year</option><option>Final Year</option><option>Graduated</option>
           </select>
         </div>
         <div class="form-group"><label>Internship Track *</label>
-          <select required>
-            <option>Track A – Technical DevOps</option>
-            <option>Track B – Business & Operations</option>
+          <select id="iTrack" required>
+            <option value="technical">Track A – Technical DevOps</option>
+            <option value="non-technical">Track B – Business & Operations</option>
           </select>
         </div>
         <div class="form-group"><label>Preferred Duration</label>
-          <select>
-            <option>4 Weeks</option><option>6 Weeks</option><option>8 Weeks</option><option>12 Weeks</option>
+          <select id="iDuration">
+            <option value="4weeks">4 Weeks</option>
+            <option value="6weeks">6 Weeks</option>
+            <option value="8weeks">8 Weeks</option>
+            <option value="12weeks">12 Weeks</option>
           </select>
         </div>
       </div>
       <div class="form-group"><label>Why do you want to join SkyDevOps? *</label>
-        <textarea required placeholder="Tell us about your motivation, goals, and what you hope to learn..."></textarea>
+        <textarea id="iMessage" required placeholder="Tell us about your motivation, goals, and what you hope to learn..."></textarea>
       </div>
       <div class="form-group"><label>Any relevant skills or experience?</label>
-        <textarea placeholder="List any programming languages, tools, or previous experience..."></textarea>
+        <textarea id="iSkills" placeholder="List any programming languages, tools, or previous experience..."></textarea>
       </div>
+
+      <!-- Declaration -->
+      <div class="official-box" style="font-size:0.78rem; margin-bottom:1rem;">
+        By submitting this form, I declare that all information provided is true and correct. I understand that the internship certificate will be issued under <span class="reg-num">UDYAM-UP-28-0216875</span> by <strong>SkyDevOps Solution</strong> only upon successful completion of the program. No fees are charged for joining.
+      </div>
+
       <button type="submit" class="btn btn-primary">Submit Application 🚀</button>
     </form>
-    <div class="success-msg" id="internMsg">✅ Application submitted successfully! We will contact you within 2–3 business days.</div>
+
+    <div class="success-msg" id="internMsg">
+      ✅ Application submitted successfully! We will contact you within 2–3 business days.<br/>
+      <small style="opacity:0.8;">Queries: <a href="mailto:er.smishra2020@gmail.com" style="color:var(--sky)">er.smishra2020@gmail.com</a> · <a href="tel:9650716663" style="color:var(--sky)">+91 9650716663</a></small>
+    </div>
+    <div id="internError" style="display:none; color:#ff4d6d; font-size:0.85rem; margin-top:0.75rem;"></div>
   </div>
 
   <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
@@ -128,13 +230,84 @@
 
 <footer>
   <div class="footer-grid">
-    <div class="footer-col"><h4>SkyDevOps Solution</h4><p>Owned by <strong style="color:var(--white)">Ms. Sushila Mishra</strong></p><p>📧 info@skydevopssolution.com</p><p>📞 +91 98765 43210</p></div>
+    <div class="footer-col">
+      <h4>SkyDevOps Solution</h4>
+      <p>Proprietor: <strong style="color:var(--white)">Sushila Mishra</strong></p>
+      <p style="font-size:0.78rem; color:var(--muted); margin-top:0.3rem; line-height:1.8;">
+        MSME: UDYAM-UP-28-0216875<br/>
+        GSTIN: 09AJOPC8312N1ZS<br/>
+        NIC 62013 · Micro Enterprise · Est. 2020
+      </p>
+      <p style="margin-top:0.5rem;">📧 <a href="mailto:er.smishra2020@gmail.com" style="color:var(--sky)">er.smishra2020@gmail.com</a></p>
+      <p>📞 <a href="tel:9650716663" style="color:var(--sky)">+91 9650716663</a></p>
+      <p style="font-size:0.75rem; color:var(--muted); margin-top:0.25rem;">203, Block 5, Greater Noida, UP – 201308</p>
+    </div>
     <div class="footer-col"><h4>Services</h4><a href="services.html">DevOps</a><a href="services.html">CI/CD</a><a href="services.html">Cloud</a></div>
     <div class="footer-col"><h4>Internship</h4><a href="internship.html">Apply</a><a href="internship-rules.html">Rules</a><a href="offer-letter.html">Offer Letter</a></div>
     <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="footer-bottom"><p>© 2025 SkyDevOps Solution | Sole Owner: Sushila Mishra</p></div>
+  <div class="footer-bottom">
+    <p>© 2025 SkyDevOps Solution | Proprietor: Sushila Mishra | MSME: UDYAM-UP-28-0216875 | GSTIN: 09AJOPC8312N1ZS</p>
+  </div>
 </footer>
+
 <script src="js/main.js"></script>
+<script>
+  document.getElementById('internForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const name    = document.getElementById('iName').value.trim();
+    const email   = document.getElementById('iEmail').value.trim();
+    const phone   = document.getElementById('iPhone').value.trim();
+    const college = document.getElementById('iCollege').value.trim();
+    const degree  = document.getElementById('iDegree').value.trim();
+    const message = document.getElementById('iMessage').value.trim();
+    const errEl   = document.getElementById('internError');
+
+    if (!name || !email || !phone || !college || !degree || !message) {
+      errEl.textContent = 'Please fill all required (*) fields.';
+      errEl.style.display = 'block';
+      return;
+    }
+
+    errEl.style.display = 'none';
+    const btn = this.querySelector('button[type=submit]');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+
+    const payload = {
+      name, email, phone,
+      college,
+      course: degree,
+      track:    document.getElementById('iTrack').value,
+      duration: document.getElementById('iDuration').value,
+      year:     document.getElementById('iYear').value,
+      message,
+      skills: document.getElementById('iSkills').value.trim()
+    };
+
+    const API = localStorage.getItem('sdApiUrl') || '';
+
+    try {
+      if (API) {
+        const res = await fetch(API + '/api/applications/apply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Submission failed.');
+      }
+      this.style.display = 'none';
+      document.getElementById('internMsg').style.display = 'block';
+    } catch(err) {
+      errEl.textContent = err.message || 'Something went wrong. Please email er.smishra2020@gmail.com directly.';
+      errEl.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Submit Application 🚀';
+    }
+  });
+</script>
+
 </body>
 </html>
