@@ -4,9 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SkyDevOps Solution – IT & DevOps Services | Sushila Mishra</title>
-<meta name="description" content="SkyDevOps Solution – Leading IT & DevOps company offering cloud migration, CI/CD pipelines, automation, and internship training programs. Owned by Sushila Mishra.">
+<meta name="description" content="SkyDevOps Solution – Leading IT & DevOps company offering cloud migration, CI/CD pipelines, automation, and internship training programs. MSME Registered. Owned by Sushila Mishra.">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+<style>
+  /* Registration Strip — uses hardcoded #00b4f0 (same as --sky in style.css) */
+  .reg-strip {
+    background: #e0f6fe;
+    border-bottom: 2px solid #00b4f0;
+    padding: 7px 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .reg-strip .reg-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 14px;
+    border-right: 1px solid #bae6fd;
+    font-size: 0.76rem;
+  }
+  .reg-strip .reg-item:first-child { padding-left: 0; }
+  .reg-strip .reg-item:last-child { border-right: none; }
+  .reg-strip .reg-label {
+    color: #64748b;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  .reg-strip .reg-value {
+    color: #0082b3;
+    font-weight: 700;
+    font-family: 'Segoe UI', monospace;
+  }
+  .reg-strip .reg-value a {
+    color: #0082b3;
+    text-decoration: none;
+  }
+  .reg-strip .reg-value a:hover { text-decoration: underline; }
+
+  @media(max-width: 768px) {
+    .reg-strip { flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px 5%; }
+    .reg-strip .reg-item { border-right: none; padding: 2px 0; }
+  }
+</style>
 </head>
 <body>
 
@@ -22,6 +65,30 @@
   </ul>
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
+
+<!-- ✅ REGISTRATION STRIP — shows MSME, GST, name, phone, email in blue -->
+<div class="reg-strip">
+  <div class="reg-item">
+    <span class="reg-label">MSME / UDYAM</span>
+    <span class="reg-value">UDYAM-UP-28-0216875</span>
+  </div>
+  <div class="reg-item">
+    <span class="reg-label">GSTIN</span>
+    <span class="reg-value">09AJOPC8312N1ZS</span>
+  </div>
+  <div class="reg-item">
+    <span class="reg-label">Proprietor</span>
+    <span class="reg-value">Sushila Mishra</span>
+  </div>
+  <div class="reg-item">
+    <span class="reg-label">📞</span>
+    <span class="reg-value"><a href="tel:9650716663">+91 9650716663</a></span>
+  </div>
+  <div class="reg-item">
+    <span class="reg-label">📧</span>
+    <span class="reg-value"><a href="mailto:er.smishra2020@gmail.com">er.smishra2020@gmail.com</a></span>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -53,51 +120,27 @@
   <h2 class="section-title">Core <span style="color:var(--sky)">IT Services</span></h2>
   <p class="section-sub">From CI/CD pipelines to full cloud migration — we deliver modern DevOps solutions that scale.</p>
   <div class="grid-3">
-    <div class="card">
-      <div class="card-icon">⚙️</div>
-      <h3>DevOps Consulting</h3>
-      <p>End-to-end DevOps transformation — culture, tooling, pipelines, and process optimization for your team.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🔄</div>
-      <h3>CI/CD Pipelines</h3>
-      <p>Automated build, test, and deploy pipelines using Jenkins, GitHub Actions, GitLab CI, and Azure DevOps.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">☁️</div>
-      <h3>Cloud Migration</h3>
-      <p>Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost architecture.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🤖</div>
-      <h3>IT Automation</h3>
-      <p>Automate repetitive workflows for schools, clinics, hotels, and banks using modern tools and scripts.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🛡️</div>
-      <h3>Infrastructure as Code</h3>
-      <p>Terraform, Ansible, and Kubernetes to manage your infrastructure reliably and repeatably.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">📊</div>
-      <h3>Monitoring & Alerts</h3>
-      <p>Real-time monitoring with Prometheus, Grafana, and ELK Stack — catch issues before they happen.</p>
-    </div>
+    <div class="card"><div class="card-icon">⚙️</div><h3>DevOps Consulting</h3><p>End-to-end DevOps transformation — culture, tooling, pipelines, and process optimization for your team.</p></div>
+    <div class="card"><div class="card-icon">🔄</div><h3>CI/CD Pipelines</h3><p>Automated build, test, and deploy pipelines using Jenkins, GitHub Actions, GitLab CI, and Azure DevOps.</p></div>
+    <div class="card"><div class="card-icon">☁️</div><h3>Cloud Migration</h3><p>Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost architecture.</p></div>
+    <div class="card"><div class="card-icon">🤖</div><h3>IT Automation</h3><p>Automate repetitive workflows for schools, clinics, hotels, and banks using modern tools and scripts.</p></div>
+    <div class="card"><div class="card-icon">🛡️</div><h3>Infrastructure as Code</h3><p>Terraform, Ansible, and Kubernetes to manage your infrastructure reliably and repeatably.</p></div>
+    <div class="card"><div class="card-icon">📊</div><h3>Monitoring & Alerts</h3><p>Real-time monitoring with Prometheus, Grafana, and ELK Stack — catch issues before they happen.</p></div>
   </div>
   <div style="text-align:center; margin-top: 2.5rem;">
-    <a href="services.html" class="btn btn-outline">View All Services →</a>
+    <a href="services.html" class="btn btn-outline" style="color:#0f172a; border-color:#e2e8f0;">View All Services →</a>
   </div>
 </section>
 
 <!-- INTERNSHIP CTA -->
-<section style="background: rgba(0,180,240,0.04); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<section style="background:#f0faff; border-top:1px solid #bae6fd; border-bottom:1px solid #bae6fd;">
   <div style="max-width: 780px; margin: 0 auto; text-align: center;">
     <div class="section-label">Internship Program</div>
     <h2 class="section-title">Launch Your <span style="color:var(--sky)">Tech Career</span></h2>
-    <p class="section-sub">SkyDevOps Solution offers a structured internship program with live project experience, mentorship, and an official completion certificate.</p>
+    <p class="section-sub">SkyDevOps Solution offers a structured internship program with live project experience, mentorship, and an official completion certificate — issued under MSME Registration <strong style="color:#00b4f0">UDYAM-UP-28-0216875</strong>.</p>
     <div class="hero-btns" style="justify-content:center;">
-      <a href="internship.html" class="btn btn-primary">Apply Now</a>
-      <a href="internship-rules.html" class="btn btn-outline">View Rules</a>
+      <a href="internship.html" class="btn btn-primary" style="background:#00b4f0; color:white;">Apply Now</a>
+      <a href="internship-rules.html" class="btn btn-outline" style="color:#0f172a; border-color:#e2e8f0;">View Rules</a>
     </div>
   </div>
 </section>
@@ -108,30 +151,10 @@
   <h2 class="section-title">Sectors We <span style="color:var(--sky)">Serve</span></h2>
   <p class="section-sub">Our automation solutions are tailored for four key industry verticals.</p>
   <div class="grid-2">
-    <div class="card">
-      <div class="card-icon">🏫</div>
-      <h3>Schools & Education</h3>
-      <p>Automate admissions, attendance, result processing, fee management, and LMS integrations for educational institutions.</p>
-      <a href="industries.html" style="color:var(--sky); font-size:0.9rem;">Learn more →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">🏥</div>
-      <h3>Clinics & Healthcare</h3>
-      <p>Streamline patient records, appointment booking, billing, and report generation with intelligent automation.</p>
-      <a href="industries.html" style="color:var(--sky); font-size:0.9rem;">Learn more →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">🏨</div>
-      <h3>Hotels & Hospitality</h3>
-      <p>Automate check-in/out, room management, invoicing, and guest experience workflows for modern hospitality.</p>
-      <a href="industries.html" style="color:var(--sky); font-size:0.9rem;">Learn more →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">🏦</div>
-      <h3>Banks & Finance</h3>
-      <p>Secure automation for KYC, loan processing, transaction reconciliation, and compliance reporting.</p>
-      <a href="industries.html" style="color:var(--sky); font-size:0.9rem;">Learn more →</a>
-    </div>
+    <div class="card"><div class="card-icon">🏫</div><h3>Schools & Education</h3><p>Automate admissions, attendance, result processing, fee management, and LMS integrations.</p><a href="industries.html" style="color:#00b4f0; font-size:0.9rem;">Learn more →</a></div>
+    <div class="card"><div class="card-icon">🏥</div><h3>Clinics & Healthcare</h3><p>Streamline patient records, appointment booking, billing, and report generation with automation.</p><a href="industries.html" style="color:#00b4f0; font-size:0.9rem;">Learn more →</a></div>
+    <div class="card"><div class="card-icon">🏨</div><h3>Hotels & Hospitality</h3><p>Automate check-in/out, room management, invoicing, and guest experience workflows.</p><a href="industries.html" style="color:#00b4f0; font-size:0.9rem;">Learn more →</a></div>
+    <div class="card"><div class="card-icon">🏦</div><h3>Banks & Finance</h3><p>Secure automation for KYC, loan processing, transaction reconciliation, and compliance reporting.</p><a href="industries.html" style="color:#00b4f0; font-size:0.9rem;">Learn more →</a></div>
   </div>
 </section>
 
@@ -143,10 +166,14 @@
     <div class="owner-avatar">SM</div>
     <div class="owner-info">
       <h3>Sushila Mishra</h3>
-      <div class="owner-title">Sole Owner & CEO – SkyDevOps Solution</div>
-      <p>Sushila Mishra is the founder and sole owner of SkyDevOps Solution, an IT services company dedicated to delivering world-class DevOps, cloud automation, and internship training programs. With a vision to empower businesses and students alike, she has built SkyDevOps Solution from the ground up as a reliable technology partner across multiple industry sectors.</p>
-      <br>
-      <a href="about.html" class="btn btn-outline" style="margin-top:0.5rem; padding:10px 22px; font-size:0.9rem;">About the Company →</a>
+      <div class="owner-title">Proprietor & CEO – SkyDevOps Solution</div>
+      <p style="margin-top:8px;">Sushila Mishra is the founder and sole proprietor of SkyDevOps Solution, a Government-registered MSME IT enterprise (UDYAM-UP-28-0216875) delivering world-class DevOps, cloud automation, and internship training programs across multiple industry sectors.</p>
+      <p style="margin-top:10px; font-size:0.85rem; color:#64748b;">
+        📧 <a href="mailto:er.smishra2020@gmail.com" style="color:#00b4f0;">er.smishra2020@gmail.com</a> &nbsp;|&nbsp;
+        📞 <a href="tel:9650716663" style="color:#00b4f0;">+91 9650716663</a> &nbsp;|&nbsp;
+        GSTIN: <span style="color:#00b4f0; font-family:monospace;">09AJOPC8312N1ZS</span>
+      </p>
+      <a href="about.html" class="btn btn-outline" style="display:inline-block; margin-top:12px; padding:10px 22px; font-size:0.9rem; color:#0f172a; border-color:#e2e8f0;">About the Company →</a>
     </div>
   </div>
 </section>
@@ -156,35 +183,22 @@
   <div class="footer-grid">
     <div class="footer-col">
       <h4>SkyDevOps Solution</h4>
-      <p>Owned & managed by <strong style="color:var(--white)">Ms. Sushila Mishra</strong> — delivering cutting-edge DevOps, cloud, and automation services.</p>
-      <br>
-      <p>📧 info@skydevopssolution.com</p>
-      <p>📞 +91 98765 43210</p>
-      <p>🏢 Karnataka, India</p>
+      <p>Proprietor: <strong style="color:#fff">Sushila Mishra</strong></p>
+      <p style="font-size:0.78rem;margin-top:8px;line-height:2;color:#94a3b8;">
+        MSME: UDYAM-UP-28-0216875<br/>
+        GSTIN: 09AJOPC8312N1ZS<br/>
+        NIC 62013 · Micro Enterprise · Est. 2020<br/>
+        203, Block 5, Greater Noida, UP – 201308
+      </p>
+      <p style="margin-top:10px;">📧 <a href="mailto:er.smishra2020@gmail.com" style="color:#00b4f0;">er.smishra2020@gmail.com</a></p>
+      <p style="margin-top:4px;">📞 <a href="tel:9650716663" style="color:#00b4f0;">+91 9650716663</a></p>
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <a href="services.html">DevOps Solutions</a>
-      <a href="services.html">CI/CD Pipelines</a>
-      <a href="services.html">Cloud Migration</a>
-      <a href="services.html">Automation</a>
-    </div>
-    <div class="footer-col">
-      <h4>Internship</h4>
-      <a href="internship.html">Apply Now</a>
-      <a href="internship-rules.html">Rules & Guidelines</a>
-      <a href="offer-letter.html">Offer Letter</a>
-      <a href="certificate.html">Certificate</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="about.html">About Us</a>
-      <a href="industries.html">Industries</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">DevOps Solutions</a><a href="services.html">CI/CD Pipelines</a><a href="services.html">Cloud Migration</a><a href="services.html">Automation</a></div>
+    <div class="footer-col"><h4>Internship</h4><a href="internship.html">Apply Now</a><a href="internship-rules.html">Rules & Guidelines</a><a href="offer-letter.html">Offer Letter</a><a href="certificate.html">Certificate</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="industries.html">Industries</a><a href="contact.html">Contact</a></div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 SkyDevOps Solution. All rights reserved. | Sole Owner: Sushila Mishra</p>
+    <p>© 2025 SkyDevOps Solution | Proprietor: Sushila Mishra | MSME: UDYAM-UP-28-0216875 | GSTIN: 09AJOPC8312N1ZS</p>
     <p>Made with ♥ in India</p>
   </div>
 </footer>

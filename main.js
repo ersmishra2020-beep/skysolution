@@ -78,22 +78,19 @@ function renderFooter() {
     <div class="footer-grid">
       <div class="footer-col">
         <h4>SkyDevOps Solution</h4>
-        <p>Owned & managed by <strong style="color:var(--white)">Ms. Sushila Mishra</strong></p>
-        <p>📧 info@skydevopssolution.com</p>
-        <p>📞 +91 98765 43210</p>
-        <p>🏢 Karnataka, India</p>
+        <p>Proprietor: <strong style="color:#fff">Sushila Mishra</strong></p>
+        <p style="font-size:0.78rem;margin-top:8px;line-height:2;color:#94a3b8;">
+          MSME: UDYAM-UP-28-0216875<br/>GSTIN: 09AJOPC8312N1ZS<br/>NIC 62013 · Micro Enterprise · Est. 2020<br/>203, Block 5, Greater Noida, UP – 201308
+        </p>
+        <p>📧 <a href="mailto:er.smishra2020@gmail.com" style="color:#00b4f0;">er.smishra2020@gmail.com</a></p>
+        <p>📞 <a href="tel:9650716663" style="color:#00b4f0;">+91 9650716663</a></p>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="services.html">DevOps</a>
-        <a href="services.html">CI/CD</a>
-        <a href="services.html">Cloud</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
+      <div class="footer-col"><h4>Services</h4><a href="services.html">DevOps Solutions</a><a href="services.html">CI/CD Pipelines</a><a href="services.html">Cloud Migration</a></div>
+      <div class="footer-col"><h4>Internship</h4><a href="internship.html">Apply Now</a><a href="internship-rules.html">Rules</a><a href="offer-letter.html">Offer Letter</a><a href="certificate.html">Certificate</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="industries.html">Industries</a><a href="contact.html">Contact</a></div>
     </div>
-  </footer>`;
-}
+    <div class="footer-bottom">
+      <p>© 2025 SkyDevOps Solution | Proprietor: Sushila Mishra | MSME: UDYAM-UP-28-0216875 | GSTIN: 09AJOPC8312N1ZS</p>
+      <p>Made with ♥ in India</p>
+    </div>
+  </footer>\`; }
